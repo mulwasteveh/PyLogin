@@ -9,8 +9,11 @@ mydb = mysql.connector.connect(
     password = ""
 
 )
-mycar = mydb.cursor()
-print("Connection success!")
+print(mydb)
+
+      #button_funtion
+def backbutton(self, widget):
+       self.top.go_back()
 
 def sign_here():
     top= Toplevel()
@@ -67,12 +70,11 @@ def sign_here():
                             variable=Female)
 
 
-    bt1= Button(top, text="Back", font="times 17 bold")
+    bt1= Button(top, text="Back", font="times 17 bold", command=backbutton)
     bt1.place(x=50, y=430)
 
     bt2 = Button(top, text="Submit", font="times 17 bold")
     bt2.place(x=220, y=430)
-
 
 
 #creates a GUI window
